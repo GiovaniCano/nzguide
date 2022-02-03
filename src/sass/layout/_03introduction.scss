@@ -1,0 +1,25 @@
+.introduction {
+    margin: 4rem auto;
+}
+.introduction__content {
+    display: grid;
+    grid-template-rows: auto auto;
+    column-gap: 3rem;
+    picture {
+        margin: auto 0;
+        img {
+            border-radius: .8rem;
+        }
+    }
+    div {
+        margin: auto 0;
+        p {
+            line-height: 1.8;
+        }
+    }
+
+    @include tablet {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+}

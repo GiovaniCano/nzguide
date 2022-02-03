@@ -1,0 +1,30 @@
+@import 'base/normalize';
+@import 'base/mixins&var';
+@import 'base/globales';
+
+@import 'layout/01header';
+@import 'layout/02video';
+@import 'layout/03introduction';
+@import 'layout/04places';
+@import 'layout/05gallery';
+@import 'layout/06packages';
+
+#places, #gallery, #packages {
+    scroll-margin-top: $headerHeightPhone - .1rem;
+    @include phone {
+        scroll-margin-top: $headerHeightCustom - .1rem;
+    }
+    @include customResponsive(810px) {
+        scroll-margin-top: $headerHeightDesktop;
+    }
+}
+
+.footer {
+    background-color: $red2;
+    padding: 1.4rem;
+    p {
+        margin: 0;
+        text-align: center;
+        color: black;
+    }
+}

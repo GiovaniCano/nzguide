@@ -1,0 +1,98 @@
+.places-bg {
+    background-color: $red2;
+    padding: 4rem 0;
+
+    h3 {
+        margin-top: 0;
+        color: white;
+    }
+}
+.places {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    @include phone {
+        flex-direction: row;
+        align-items: unset;
+        gap: 2.5rem;
+    }
+    @include tablet {
+        gap: 4rem;
+    }
+
+    .places__list {
+        width: 100%;
+        padding: 2rem 0;
+        border-radius: 1.2rem;
+        @include phone {
+            max-width: 45rem;
+            width: 50%;
+        }
+    }
+    h4 {
+        margin: 0 0 1rem 0;
+
+        &:after {
+            content: '';
+            display: block;
+            margin: 1rem auto;
+            width: 10rem;
+            height: 10rem;
+
+            background-color: $white-transparent;
+            border-radius: 2rem;
+            
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+.places__list-city { 
+    background-color: $blue;
+    & h4:after {
+        .webp & {
+            // background-image: url(/build/img/icon-city.webp);
+            background-image: url(../img/icon-city.webp);
+        }
+        .no-webp & {
+            background-image: url(../img/icon-city.png);
+        }
+    }
+    li {
+        padding: 1rem 4rem;
+        text-transform: capitalize;
+
+        &:nth-child(odd) {
+            background-color: darken($blue2,5);
+        }
+    }
+}
+.places__list-natural {
+    background-color: darken($blue2,5);
+    & h4:after {
+        .webp & {
+            background-image: url(../img/icon-forest.webp);
+        }
+        .no-webp & {
+            background-image: url(../img/icon-forest.png);
+        }
+    }
+    li {
+        padding: 1rem 4rem;
+        text-transform: capitalize;
+
+        &:nth-child(odd) {
+            background-color: $blue;
+        }
+    }
+
+}

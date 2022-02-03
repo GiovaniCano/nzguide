@@ -1,0 +1,73 @@
+.video {
+    position: relative;
+    max-height: 50rem;
+    overflow: hidden;
+    .video__content {
+        z-index: 1;
+        color: white;
+        position: absolute;
+
+        background: linear-gradient(150deg, $red-transparent -10%, $blue-transparent 40%, $blue-transparent 60%, $white-transparent 110%);
+        height: 100%;
+        width: 100%;
+
+        .video__text {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include phone {
+                justify-content: flex-start;
+            }
+        }
+        h2 {
+            font-size: 6.5vw;
+            font-weight: 400;
+            text-shadow: .3rem .3rem .2rem $shadow;
+            text-transform: capitalize;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include phone {
+                font-size: 4.5vw;
+                align-items: unset;
+            }
+            @include desktop {
+                font-size: 5.5rem;
+            }
+
+            span {
+                font-size: 1.5em;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $red;
+                &:before {
+                    content: '';
+                    display: inline-block;
+
+                    height: 1em;
+                    width: 1em;
+                    margin: 0 1rem 0 0;
+                    
+                    .webp & { 
+                        background-image: url(../img/nz-flag.webp);
+                    }
+                    .no-webp & { 
+                        background-image: url(../img/nz-flag.png);
+                    }
+                    background-repeat: no-repeat;
+                    background-size: 1em;
+                    background-position: center bottom;
+                    @include phone {
+                        margin: 0 2%;
+                    }
+                }
+            }
+        }
+    }
+    video {
+        display: block;
+        width: 100%;
+    }
+}

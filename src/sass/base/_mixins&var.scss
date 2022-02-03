@@ -1,0 +1,39 @@
+$fuentePrincipal: 'Manuale', serif;
+
+$blue: #1c3d91;
+$blue2:rgb(58, 92, 179);
+$red: #f72840;
+$red2: #fd808e;
+
+$red-transparent: rgba(255, 78, 78, 0.55);
+$blue-transparent: rgba(47, 66, 153, 0.6);
+$white-transparent: rgba(255, 255, 255, 0.55);
+
+$black: rgb(71, 71, 71);
+$shadow: rgba(25, 26, 61, 0.493);
+
+$headerHeightPhone: 20.3rem;
+$headerHeightCustom: 10.6rem;
+$headerHeightDesktop: 6.8rem;
+
+@mixin phone {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin customResponsive($minWidth) {
+    @media (min-width: $minWidth) {
+        @content;
+    }
+}

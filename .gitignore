@@ -1,0 +1,5 @@
+deploy/
+package-lock.json
+src/img/
+build/video/
+src/video/

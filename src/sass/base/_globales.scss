@@ -1,0 +1,48 @@
+/* box-sizing */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+/*10px = 1rem*/
+html{ font-size: 62.5%; }
+body{ font-size: 16px; }
+
+h1, h2, ul, ol, li, a {
+    margin: 0;
+}
+
+body {
+    font-family: $fuentePrincipal;
+    // background-color: $blue;
+}
+h3 {
+    font-size: 3.3rem;
+    text-align: center;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+h4 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+p, li {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
